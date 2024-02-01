@@ -1,20 +1,17 @@
-import React, {useContext, useState} from 'react'
-import App from '../App';
+import React, {useState} from 'react'
 
 const ThemeContextWrapper = React.createContext();
 
-const ThemeContext = () => {
-    const [theme, setTheme] = useState("dark");
+const ThemeContext = ({ children }) => {
+    const [theme, setTheme] = useState("light");
     const darkMode = () => {
-        if(theme === "dark")
-            return setTheme("light");
-        return setTheme("dark");
+        setTheme(prevTheme => prevTheme === "dark" ? "light" : "dark");
     }
     return (
         <ThemeContextWrapper.Provider value={{darkMode, theme}}>
-            <App />
+            { children }
         </ThemeContextWrapper.Provider>
     )
 }
 
-export default ThemeContext
+export {ThemeContext, ThemeContextWrapper}
