@@ -7,7 +7,19 @@
 
 body {
     font-family: Lato, Helvetica, Arial, sans-serif;
+    
+}
+
+.App{
+    width: 100vw;
+    height: 100vh;
+}
+
+.App-light{
     background: #eee;
+}
+.App-dark {
+    background: #3a3636;
 }
 
 button {
@@ -156,17 +168,17 @@ button {
     .menuIcon {
         cursor: pointer;
         display: block;
-        position: fixed;
+        position: absolute;
         right: 15px;
         top: 20px;
         height: 23px;
         width: 27px;
-        z-index: 12;
+        z-index: 20;
     }
 
     /* Icon Bars */
     .icon-bars {
-        background: rgb(13, 26, 38);
+        background: rgb(116, 126, 136);
         position: absolute;
         left: 1px;
         top: 45%;
@@ -177,30 +189,26 @@ button {
     }
 
     .icon-bars::before {
-        background: rgb(13, 26, 38);
+        background: rgb(88, 93, 98);
         content: '';
         position: absolute;
         left: 0;
         top: -8px;
         height: 2px;
         width: 20px;
-        /*     -webkit-transition: top 0.2s ease 0.3s;
-    transition: top 0.2s ease 0.3s; */
         -webkit-transition: 0.3s width 0.4s;
         transition: 0.3s width 0.4s;
     }
 
     .icon-bars::after {
         margin-top: 0px;
-        background: rgb(13, 26, 38);
+        background: rgb(123, 128, 133);
         content: '';
         position: absolute;
         left: 0;
         bottom: -8px;
         height: 2px;
         width: 20px;
-        /*     -webkit-transition: top 0.2s ease 0.3s;
-    transition: top 0.2s ease 0.3s; */
         -webkit-transition: 0.3s width 0.4s;
         transition: 0.3s width 0.4s;
     }
@@ -349,21 +357,30 @@ button {
                    Responsive Mobile Menu 
   ======================================================*/
 .overlay-menu {
-    background: lightblue;
     color: rgb(13, 26, 38);
+    transform: translateX(400%);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     padding-right: 15px;
-    transform: translateX(-100%);
-    width: 100vw;
+    width: 40vw;
     height: 100vh;
     -webkit-transition: transform 0.2s ease-out;
     transition: transform 0.2s ease-out;
 }
+
+/* .menu-{
+    transform: translateX(250%);
+} */
+
+.menu-toggle{
+    transform: translateX(0%);
+    -webkit-transition: transform 0.2s ease-out;
+        transition: transform 0.2s ease-out;
+} 
 
 .overlay-menu ul,
 .overlay-menu li {
@@ -373,10 +390,9 @@ button {
 
 .overlay-menu li button {
     display: block;
-    font-size: 1.8em;
     letter-spacing: 4px;
     /*   opacity: 0; */
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: right;
     text-transform: uppercase;
     -webkit-transition: color 0.3s ease;
@@ -393,19 +409,11 @@ button {
 }
 
 
-.btn-dark {
-    background-color: grey;
+.dark{
+    background-color: black;
     color: rgb(202, 209, 215);
 }
-
-.btn-light {
+.light {
     background-color: white;
     color: rgb(13, 26, 38);
-}
-
-.navbar-light li button{
-    color: rgb(13, 26, 38);
-}
-.navbar-dark li button {
-    color: rgb(202, 209, 215);
 }
