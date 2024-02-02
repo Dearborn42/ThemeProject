@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { ThemeContextWrapper } from './ThemeContext'
 
 const MainContent = () => {
-  return (
-    <div className='mainContent'>MainContent</div>
-  )
+    const {theme} = useContext(ThemeContextWrapper);
+    return (
+        <div className={`mainContent ${theme}`}>MainContent</div>
+    )
 }
 
 export default MainContent

@@ -36,6 +36,7 @@ button {
     position: fixed;
     top: 0;
     height: 70px;
+    margin-bottom: 70vh;
     line-height: 60px;
     width: 100%;
     z-index: 10;
@@ -436,8 +437,6 @@ button {
     font-size: 15px;
     line-height: 24px;
     color: #737373;
-    position: absolute;
-    bottom: 0;
 }
 
 .site-footer hr {
@@ -607,4 +606,13 @@ button {
         margin-right: 0;
         font-weight: 600
     }
+}
+
+.mainContent{
+    display: flex;
+    width: 85vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: white; */
 }
