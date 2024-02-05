@@ -390,15 +390,13 @@ button {
 
 .overlay-menu li button {
     display: block;
-    letter-spacing: 4px;
-    /*   opacity: 0; */
     padding: 15px 0;
     text-align: right;
     text-transform: uppercase;
     -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
-    /*   -webkit-transition: 0.2s opacity 0.2s ease-out;
-  transition: 0.2s opacity 0.2s ease-out; */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .overlay-menu li button:hover,
@@ -631,6 +629,11 @@ button {
 
 .dataSection div{
     max-width: max-content;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 
