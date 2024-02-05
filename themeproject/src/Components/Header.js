@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Header = ({theme}) => {
+const Header = ({theme, text, class_name}) => {
     return (
-        <div className="logo">
-            <button className={`${theme}`}><i className="fas fa-chess-knight"></i> Logo</button >
+        <div className={class_name}>
+            <button className={`${theme}`}><i className="fas fa-chess-knight"></i>{text}</button >
         </div>
     )
 }

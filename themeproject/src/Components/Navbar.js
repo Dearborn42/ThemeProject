@@ -9,7 +9,7 @@ const Navbar = () => {
         <>
         <nav className={`navbar navbar-${theme}`}>
             <div className="nav-wrapper">
-                <Header theme={theme} />
+                <Header theme={theme} text={"The Apollo Moon Landing"} class_name={"logo"}/>
                 <ul id="menu">
                 <li><button className={`${theme}`}onClick={() => darkMode()}>Change Mode</button ></li>
                 </ul>

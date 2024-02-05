@@ -12,7 +12,6 @@ body {
 
 .App{
     width: 100vw;
-    height: 100vh;
 }
 
 .App-light{
@@ -33,10 +32,9 @@ button {
                           Navbar
   ======================================================*/
 .navbar{
-    position: fixed;
     top: 0;
     height: 70px;
-    margin-bottom: 70vh;
+    margin-bottom: 80px;
     line-height: 60px;
     width: 100%;
     z-index: 10;
@@ -614,5 +612,32 @@ button {
     height: 100vh;
     margin-left: auto;
     margin-right: auto;
+    flex-wrap: wrap;
+    margin-top: 5.4%;
+    margin-bottom: 5.4%;
     /* background-color: white; */
+}
+
+.dataSection{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dataSection div{
+    max-width: max-content;
+}
+
+
+.dataSection-dark {
+    border: 2px solid white;
+}
+
+.dataSection-light {
+    border: 2px solid black;
 }
